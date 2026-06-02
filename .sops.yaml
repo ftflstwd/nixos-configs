@@ -1,0 +1,18 @@
+# sops creation rules: which recipients can decrypt which files.
+# Replace the placeholder age public keys below with your real ones, then
+# `sops` will encrypt new/edited files to all listed recipients automatically.
+#
+# Get an admin key:  age-keygen -o ~/.config/sops/age/keys.txt   (prints pubkey)
+# Get a host key:    age-keygen -o /var/lib/sops-nix/key.txt      (prints pubkey)
+#   (run the host one on the machine, or generate now and copy it there)
+
+keys:
+  - &admin age1cchxk42ga58x2yah9lkj8jrdrpp06jx57g0erd483kv8f3ps0yfq9sdrph
+  - &host_z13nix age1736ww97esgvd04ce3ct6rthscgcmr5kv3jl8t5znh2z0dq6spy6qh0cqfs
+
+creation_rules:
+  - path_regex: nixos/hosts/z13nix/secrets\.yaml$
+    key_groups:
+      - age:
+          - *admin
+          - *host_z13nix

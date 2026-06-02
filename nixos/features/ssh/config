@@ -1,0 +1,6 @@
+# ~/.ssh/config — managed declaratively by nixos/features/ssh.nix
+# Blank for now. Add Host blocks as needed, e.g.:
+#
+#   Host github.com
+#       IdentityFile ~/.ssh/id_ed25519_sk_laptop
+#       IdentitiesOnly yes

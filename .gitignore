@@ -1,0 +1,20 @@
+# Nix build results
+result
+result-*
+
+# direnv / dev shells
+.direnv/
+.envrc.local
+
+# Editor / OS cruft
+*.swp
+*~
+.DS_Store
+
+# Secrets: NEVER commit private age keys (the .yaml secrets ARE encrypted, so
+# they stay tracked — see .sops.yaml).
+*key.txt
+keys.txt
+*.age
+
+# NOTE: flake.lock is intentionally NOT ignored — it pins your inputs.
