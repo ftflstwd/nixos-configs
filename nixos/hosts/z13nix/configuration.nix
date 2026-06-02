@@ -46,6 +46,7 @@
       self.nixosModules.python3
       self.nixosModules.opencode
       self.nixosModules.wireshark
+      self.nixosModules.steam
 
       # disko owns this machine's disk. The module provides the fileSystems +
       # swap; the spec in ./disko.nix is the formatter target. Set the device
