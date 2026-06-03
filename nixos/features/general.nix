@@ -39,6 +39,8 @@
       nmap
       ripgrep
       sops # edit the encrypted secrets.yaml: `sops nixos/hosts/<host>/secrets.yaml`
+      trippy
+      witr
     ];
   };
 }
